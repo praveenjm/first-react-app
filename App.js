@@ -11,27 +11,36 @@ const parent = React.createElement('div', {id:"parent"}, [
     ]) 
 ]);
 const title = <h1>React Element</h1>
-const HeaderComponent = () => {
+const ButtonComponent = () => (
+  <button>New Button</button>
+)
+const ButtonNew = (<button>yes</button>);
+const HeaderComponent = () => (
     // title;
-    return (
+    
     // <React.Fragment>
-    <>
     <div>
-        {title}
-        <h1>This is a React Component</h1>
-        <h2>Hello</h2>
+        <div>
+
+            
+            {title}
+            <h1>This is a React Component</h1>
+            <h2>Hello</h2>
+        </div>
+        {ButtonNew}
+        {ButtonComponent()}
+        <ButtonComponent/>
+        <ButtonComponent></ButtonComponent>
+        <div>
+            Other Component
+        </div>
+        <div>Other fragment</div>
+        <div>Other fragment</div>
     </div>
-    <div>
-        Other Component
-    </div>
-    <>
-    <div>Other fragment</div>
-    <div>Other fragment</div>
-    </>
-    </>
+    
     // </React.Fragment>
-    )
-}
+    
+)
 const jsxSyntax = <h1>Hello JSX</h1>
 // console.log(heading);
 // let a = heading.$$typeof;
