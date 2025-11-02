@@ -22,3 +22,13 @@
     margin-right: 10px;
     margin-left: 10px;
 }
+
+.Nav-items ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Nav-items ul li{
+    list-style: none;
+    margin-right: 20px;
+}
