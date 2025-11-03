@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 
 const RestaurantMenu = () => {
     const [resInfo, setResInfo] = useState(null)
-    const resid = useParams;
+    const {resId} = useParams();
     useEffect(() => {
         setResInfo(restaurantMenuItems.data);
     }, []);
@@ -22,14 +22,11 @@ const RestaurantMenu = () => {
 
     const {name, cuisines, costForTwoMessage} = resInfo?.cards[2].card.card.info;
     const itemCards = resInfo?.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards;
-    console.log(itemCards)
-    itemCards.map((itemCard) => {
-                        console.log(itemCard.card)
-                        // return <li key={itemCard?.info?.id}>{itemCard?.info?.name}</li>;
-                    })
+    
     return (
         <div className="menu">
             <h1>{name}</h1>
+            <h4>Route param id: {resId}</h4>
             <p>{cuisines.join(", ")} - {costForTwoMessage}</p>
             <h2>Menu</h2>
             <ul>
